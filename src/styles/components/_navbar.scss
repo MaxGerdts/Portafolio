@@ -1,0 +1,25 @@
+/**********
+Navbar
+**********/
+.navbar {
+  &__list {
+    @include flexBox;
+    list-style: none;
+  }
+  &__link {
+    color: $primaryLight;
+    padding: 0 1rem;
+    text-decoration: none;
+  }
+}
+
+/**********
+Light theme header
+**********/
+body.light {
+  & .navbar {
+    &__link {
+      color: $primaryDark;
+    }
+  }
+}

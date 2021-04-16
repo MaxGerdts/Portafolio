@@ -1,0 +1,94 @@
+/**********
+Services
+**********/
+.services {
+  padding: 3.75rem 0;
+  &__title {
+    color: $primary;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__contentRow {
+    @include row($margin-left: -1rem, $margin-right: -1rem);
+  }
+  &__contentCol {
+    @include col(33.3%, 33.3%, 1rem, 1rem);
+  }
+  &__content {
+    background-color: $secondaryDark;
+    box-shadow: 0 5px 10px #000;
+    color: $primaryLight;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      box-sizing: border-box;
+      height: 0;
+      transition: all 0.8s ease;
+    }
+    &::before {
+      left: 0;
+      bottom: 0;
+      border-bottom: 3px solid transparent;
+      border-left: 3px solid transparent;
+    }
+    &::after {
+      right: 0;
+      top: 0;
+      border-right: 3px solid transparent;
+      border-top: 3px solid transparent;
+    }
+    &:hover {
+      .services__icon {
+        color: $primary;
+        transition: all 0.8s ease;
+      }
+      &::before,
+      &::after {
+        border-color: $primary;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__icon {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  &__subTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &__paragraph {
+    text-align: justify;
+  }
+}
+
+/**********
+Light theme header
+**********/
+body.light {
+  & .services {
+    &__title {
+      color: $secondary;
+    }
+    &__content {
+      background-color: $secondaryLight;
+      box-shadow: 0 5px 10px #ccc;
+      color: $primaryDark;
+      &:hover {
+        .services__icon {
+          color: $secondary;
+        }
+        &::before,
+        &::after {
+          border-color: $secondary;
+        }
+      }
+    }
+  }
+}

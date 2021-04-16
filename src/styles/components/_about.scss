@@ -1,0 +1,65 @@
+/**********
+About
+**********/
+.about {
+  padding: 3.75rem 0;
+  &__content {
+    @include row();
+  }
+  &__photo {
+    @include col($flex: 40%, $max-width: 40%);
+  }
+  &__resume {
+    @include col($flex: 60%, $max-width: 60%);
+    color: $secondaryLight;
+  }
+  &__personalInformationRow {
+    @include row($margin-left: -1rem, $margin-right: -1rem);
+    margin-bottom: 1rem;
+  }
+  &__personalInformationCol {
+    @include col(none, 100%, 1rem, 1rem);
+  }
+  &__title {
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+  &__paragraph {
+    @include paragraph();
+    margin-bottom: 1rem;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__listItem {
+    margin-bottom: 1rem;
+  }
+  &__key {
+    color: $primary;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+  &__button {
+    @include button($primaryLight, $primary);
+  }
+}
+
+/**********
+Light theme header
+**********/
+body.light {
+  & .about {
+    &__resume {
+      color: $secondaryDark;
+    }
+    &__title {
+      color: $secondary;
+    }
+    &__key {
+      color: $secondary;
+    }
+    &__button {
+      @include button($primaryDark, $secondary);
+    }
+  }
+}

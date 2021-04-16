@@ -1,0 +1,54 @@
+/**********
+ToggleTheme
+**********/
+.switch {
+  display: inline-block;
+  height: 18px;
+  margin: 0 0.6rem;
+  position: relative;
+  width: 52px;
+}
+.switch .themeToggle {
+  display: none;
+}
+.slider {
+  background-color: $secondaryLight;
+  bottom: 0;
+  border-radius: 34px;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+.slider:before {
+  background: $primaryLight url('https://i.ibb.co/FxzBYR9/night.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  bottom: 0;
+  content: '';
+  height: 30px;
+  left: 0;
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+.themeToggle:checked + .slider {
+  background-color: $primary;
+}
+.themeToggle:checked + .slider:before {
+  background: $primaryLight url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}

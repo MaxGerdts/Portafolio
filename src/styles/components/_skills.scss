@@ -1,0 +1,74 @@
+/**********
+Skills
+**********/
+.skills {
+  padding: 3.75rem 0;
+  &__title {
+    color: $primary;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__subtitles {
+    color: $primaryLight;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  &__contentRow {
+    @include row($margin-left: -2rem, $margin-right: -2rem);
+  }
+  &__contentRow:last-child {
+    & .skills__content:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__contentCol {
+    @include col(50%, 50%, 2rem, 2rem);
+  }
+  &__content {
+    margin-bottom: 2rem;
+  }
+  &__labels {
+    @include flexBox($justify-content: space-between);
+    color: $primaryLight;
+    margin-bottom: 1rem;
+  }
+  &__key {
+    font-size: 15px;
+  }
+  &__value {
+    font-size: 14px;
+  }
+  &__skillBar {
+    background-color: $primaryLight;
+    height: 1rem;
+    border-radius: 0.5rem;
+  }
+  &__skill {
+    background-color: $primary;
+    border-radius: 0.5rem;
+    height: 100%;
+  }
+}
+
+/**********
+Light theme skills
+**********/
+body.light {
+  & .skills {
+    &__title {
+      color: $secondary;
+    }
+    &__subtitles {
+      color: $primaryDark;
+    }
+    &__labels {
+      color: $primaryDark;
+    }
+    &__skillBar {
+      background-color: $secondaryLight;
+    }
+    &__skill {
+      background-color: $secondary;
+    }
+  }
+}

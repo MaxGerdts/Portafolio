@@ -1,0 +1,60 @@
+/**********
+Mixins
+**********/
+@mixin row(
+  $flex-direction: row,
+  $flex-wrap: nowrap,
+  $margin-left: 0,
+  $margin-right: 0
+) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: $flex-direction;
+  flex-direction: $flex-direction;
+  -ms-flex-wrap: $flex-wrap;
+  flex-wrap: $flex-wrap;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+@mixin col($flex: 1, $max-width: 100%, $padding-left: 0, $padding-right: 0) {
+  -webkit-box-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
+  max-width: $max-width;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+@mixin flexBox(
+  $align-items: stretch,
+  $justify-content: flex-start,
+  $flex-direction: row
+) {
+  -webkit-box-align: $align-items;
+  -ms-flex-align: $align-items;
+  align-items: $align-items;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: $flex-direction;
+  flex-direction: $flex-direction;
+  -webkit-box-pack: $justify-content;
+  -ms-flex-pack: $justify-content;
+  justify-content: $justify-content;
+}
+@mixin button($color, $border) {
+  border: 3px solid $border;
+  border-radius: 3.125rem;
+  display: inline-block;
+  color: $color;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 25px;
+}
+
+@mixin paragraph {
+  letter-spacing: 1px;
+  line-height: 1.8;
+  text-align: justify;
+}

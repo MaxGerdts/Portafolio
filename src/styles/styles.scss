@@ -1,0 +1,35 @@
+/**********
+Normalize
+**********/
+@import 'normalize';
+
+/**********
+Partials
+**********/
+@import './base/mixins';
+@import './base/layouts';
+@import './base/colors';
+
+/**********
+Components
+**********/
+@import './components/about';
+@import './components/header';
+@import './components/home';
+@import './components/navbar';
+@import './components/services';
+@import './components/skills';
+@import './components/toggleTheme';
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $primaryDark;
+}
+body.light {
+  background-color: $primaryLight;
+}

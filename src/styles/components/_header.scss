@@ -1,0 +1,22 @@
+/**********
+Header
+**********/
+.header {
+  background-color: #262626;
+  position: sticky;
+  height: 4rem;
+  top: 0;
+  z-index: 1030;
+  &__content {
+    @include flexBox($align-items: center, $justify-content: space-between);
+    height: 4rem;
+  }
+}
+/**********
+Light theme header
+**********/
+body.light {
+  & header {
+    background-color: $secondaryLight;
+  }
+}
