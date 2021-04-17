@@ -16,7 +16,7 @@ Services
   }
   &__content {
     background-color: $secondaryDark;
-    box-shadow: 0 5px 10px #000;
+    box-shadow: 2px 4px 10px $shadowDark;
     color: $primaryLight;
     text-align: center;
     padding: 1rem;
@@ -70,7 +70,7 @@ Services
 }
 
 /**********
-Light theme header
+Light theme services
 **********/
 body.light {
   & .services {
@@ -79,7 +79,7 @@ body.light {
     }
     &__content {
       background-color: $secondaryLight;
-      box-shadow: 0 5px 10px #ccc;
+      box-shadow: 2px 4px 10px $shadowLight;
       color: $primaryDark;
       &:hover {
         .services__icon {

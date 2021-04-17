@@ -1,0 +1,137 @@
+/**********
+Experience
+**********/
+.experience {
+  padding: 3.75rem 0;
+  &__title {
+    color: $primary;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__timeline {
+    position: relative;
+    &::after {
+      content: '';
+      background-color: $primary;
+      border-radius: 0.5rem;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      position: absolute;
+      top: 0;
+      width: 6px;
+    }
+  }
+  &__leftContentRow {
+    @include row($margin-left: -3rem, $margin-right: -3rem);
+  }
+  &__rightContentRow {
+    @include row($margin-left: -3rem, $margin-right: -3rem);
+    justify-content: flex-end;
+  }
+  &__contentCol {
+    @include col(50%, 50%, 3rem, 3rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__content {
+    background-color: $secondaryDark;
+    border: 3px solid $primary;
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 10px $shadowDark;
+    color: $primaryLight;
+    padding: 1.5rem 2rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      border: medium solid $primary;
+      content: '';
+      top: 6px;
+    }
+    &::after {
+      content: '';
+      background-image: url('./../../assets/experience.webp');
+      background-size: cover;
+      border: 4px solid $primaryLight;
+      border-radius: 50%;
+      height: 40px;
+      position: absolute;
+      top: -8px;
+      width: 40px;
+      z-index: 1;
+    }
+  }
+  &__leftContent {
+    &::before {
+      border-width: 10px 0 10px 10px;
+      right: -13px;
+      border-color: transparent transparent transparent $primary;
+    }
+    &::after {
+      box-shadow: 2px 4px 10px $shadowDark;
+      right: -75px;
+    }
+  }
+  &__rightContent {
+    &::before {
+      border-width: 10px 10px 10px 0;
+      left: -13px;
+      border-color: transparent $primary transparent transparent;
+    }
+    &::after {
+      box-shadow: 2px 4px 10px $shadowDark;
+      left: -75px;
+    }
+  }
+  &__position {
+    margin-bottom: 0.25rem;
+  }
+  &__company {
+    margin-bottom: 0.25rem;
+  }
+  &__date {
+    margin-bottom: 0.75rem;
+  }
+  &__description {
+    @include paragraph;
+  }
+}
+
+/**********
+Light theme experience
+**********/
+body.light {
+  & .experience {
+    &__title {
+      color: $secondary;
+    }
+    &__timeline {
+      &::after {
+        background-color: $secondary;
+      }
+    }
+    &__content {
+      background-color: $secondaryLight;
+      border: 3px solid $secondary;
+      box-shadow: 2px 4px 10px $shadowLight;
+      color: $primaryDark;
+    }
+    &__leftContent {
+      &::before {
+        border-color: transparent transparent transparent $secondary;
+      }
+      &::after {
+        box-shadow: 2px 4px 10px $shadowLight;
+      }
+    }
+    &__rightContent {
+      &::before {
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $secondary transparent transparent;
+      }
+      &::after {
+        box-shadow: 2px 4px 10px $shadowLight;
+      }
+    }
+  }
+}
