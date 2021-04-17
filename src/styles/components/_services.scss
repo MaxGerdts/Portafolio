@@ -64,6 +64,7 @@ Services
     margin-bottom: 1rem;
   }
   &__paragraph {
+    @include paragraph();
     text-align: justify;
   }
 }
