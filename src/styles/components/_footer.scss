@@ -2,6 +2,7 @@
 Footer
 **********/
 .footer {
+  background-color: $secondaryDark;
   padding: 2rem;
   &__content {
     color: $primaryLight;
@@ -9,5 +10,21 @@ Footer
   }
   &__brand {
     color: $primary;
+  }
+}
+
+/**********
+Light theme footer
+**********/
+body.light {
+  & .footer {
+    background-color: $secondaryLight;
+    &__content {
+      color: $primaryDark;
+      text-align: center;
+    }
+    &__brand {
+      color: $secondary;
+    }
   }
 }

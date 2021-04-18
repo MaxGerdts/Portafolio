@@ -6,8 +6,8 @@ export const Footer = () => {
       <div className='container'>
         <div className='footer__content'>
           <p className='footer__copyright'>
-            © All Right Reserved By{' '}
-            <span className='footer__brand'>Max Gerdts R.</span>
+            © All Right Reserved By
+            <span className='footer__brand'> Max Gerdts R.</span>
           </p>
         </div>
       </div>

@@ -15,3 +15,14 @@ Projects
     margin-bottom: 4rem;
   }
 }
+
+/**********
+Light theme projects
+**********/
+body.light {
+  & .projects {
+    &__title {
+      color: $secondary;
+    }
+  }
+}
