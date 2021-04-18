@@ -7,7 +7,7 @@ export const Header = () => {
       <div className='container'>
         <div className='header__content'>
           <div>
-            <a href='#header'> MaxLogo </a>
+            <a href='#home'> MaxLogo </a>
           </div>
           <NavBar />
         </div>

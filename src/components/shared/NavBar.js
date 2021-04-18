@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import { ToggleTheme } from './ToggleTheme';
 
 export const NavBar = () => {
@@ -7,54 +8,57 @@ export const NavBar = () => {
     <nav className='navbar'>
       <ul className='navbar__list'>
         <li className='navbar__listItem'>
-          <NavLink
+          <NavHashLink
+            smooth
             activeClassName='active'
             className='navbar__link'
-            exact
             to='#home'
           >
             Inicio
-          </NavLink>
+          </NavHashLink>
         </li>
         <li className='navbar__listItem'>
-          <NavLink
+          <NavHashLink
+            smooth
             activeClassName='active'
             className='navbar__link'
-            exact
             to='#about'
           >
             Acerca
-          </NavLink>
+          </NavHashLink>
         </li>
         <li className='navbar__listItem'>
-          <NavLink
+          <NavHashLink
+            smooth
             activeClassName='active'
             className='navbar__link'
             exact
             to='#services'
           >
             Servicios
-          </NavLink>
+          </NavHashLink>
         </li>
         <li className='navbar__listItem'>
-          <NavLink
+          <NavHashLink
+            smooth
             activeClassName='active'
             className='navbar__link'
             exact
             to='#portafolio'
           >
             Portafolio
-          </NavLink>
+          </NavHashLink>
         </li>
         <li className='navbar__listItem'>
-          <NavLink
+          <NavHashLink
+            smooth
             activeClassName='active'
             className='navbar__link'
             exact
             to='#experience'
           >
             Experiencia
-          </NavLink>
+          </NavHashLink>
         </li>
         <li className='navbar__listItem'>
           <ToggleTheme />

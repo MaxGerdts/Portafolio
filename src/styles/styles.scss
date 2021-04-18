@@ -18,9 +18,11 @@ Components
 @import './components/header';
 @import './components/home';
 @import './components/navbar';
+@import './components/projects';
 @import './components/services';
 @import './components/skills';
 @import './components/toggleTheme';
+@import './components/footer';
 
 * {
   box-sizing: border-box;
@@ -33,4 +35,7 @@ body {
 }
 body.light {
   background-color: $primaryLight;
+}
+section {
+  padding: 5.5rem 0 1rem;
 }

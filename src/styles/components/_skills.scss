@@ -2,7 +2,6 @@
 Skills
 **********/
 .skills {
-  padding: 3.75rem 0;
   &__title {
     color: $primary;
     text-align: center;
@@ -15,10 +14,10 @@ Skills
   }
   &__contentRow {
     @include row($margin-left: -2rem, $margin-right: -2rem);
-  }
-  &__contentRow:last-child {
-    & .skills__content:last-child {
-      margin-bottom: 0;
+    &:last-child {
+      & .skills__content:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   &__contentCol {

@@ -1,0 +1,13 @@
+/**********
+Footer
+**********/
+.footer {
+  padding: 2rem;
+  &__content {
+    color: $primaryLight;
+    text-align: center;
+  }
+  &__brand {
+    color: $primary;
+  }
+}

@@ -4,7 +4,7 @@ import { Header } from '../shared/Header';
 import { About } from './About';
 import { Experience } from './Experience';
 import { Home } from './Home';
-import { Portafolio } from './Portafolio';
+import { Projects } from './Projects';
 import { Services } from './Services';
 import { Skills } from './Skills';
 
@@ -16,7 +16,7 @@ export const PortafolioPage = () => {
       <About />
       <Skills />
       <Services />
-      <Portafolio />
+      <Projects />
       <Experience />
       <Footer />
     </>

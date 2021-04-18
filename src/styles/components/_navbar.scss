@@ -10,6 +10,9 @@ Navbar
     color: $primaryLight;
     padding: 0 1rem;
     text-decoration: none;
+    &.active {
+      color: $primary;
+    }
   }
 }
 
@@ -20,6 +23,9 @@ body.light {
   & .navbar {
     &__link {
       color: $primaryDark;
+      &.active {
+        color: $secondary;
+      }
     }
   }
 }
