@@ -44,7 +44,7 @@ Mixins
   justify-content: $justify-content;
 }
 @mixin button($color, $border) {
-  border: 1px solid $border;
+  border: 2px solid $border;
   border-radius: 5px;
   display: inline-block;
   color: $color;

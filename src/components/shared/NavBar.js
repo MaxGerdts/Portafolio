@@ -44,9 +44,9 @@ export const NavBar = () => {
             activeClassName='active'
             className='navbar__link'
             exact
-            to='#portafolio'
+            to='#projects'
           >
-            Portafolio
+            Proyectos
           </NavHashLink>
         </li>
         <li className='navbar__listItem'>
