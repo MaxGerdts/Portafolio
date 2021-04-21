@@ -18,7 +18,12 @@ Home
     overflow: hidden;
     width: 10rem;
   }
+  &__title {
+    margin-bottom: 0.5rem;
+  }
   &__skills {
+    color: $primaryLight;
+    font-size: 1.125rem;
     margin-bottom: 1rem;
   }
   &__social {
@@ -45,6 +50,9 @@ body.light {
   & .home {
     &__content {
       color: $secondary;
+    }
+    &__skills {
+      color: $primaryDark;
     }
     &__contentImage {
       border: 0.25rem solid $secondary;

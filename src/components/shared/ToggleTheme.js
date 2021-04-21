@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export const ToggleTheme = () => {
-  window.onload = function () {
+  useEffect(() => {
     const theme = document.getElementById('themeToggle');
     theme.addEventListener('change', () => {
       document.body.classList.toggle('light');
     });
-  };
-
+  });
   return (
     <>
       <label className='switch'>
