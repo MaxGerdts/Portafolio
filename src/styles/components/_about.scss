@@ -5,8 +5,9 @@ About
   &__content {
     @include row();
   }
-  &__photo {
+  &__contentPhoto {
     @include col($flex: 40%, $max-width: 40%);
+    text-align: center;
   }
   &__resume {
     @include col($flex: 60%, $max-width: 60%);

@@ -9,7 +9,7 @@ Home
     text-align: center;
     color: $primary;
   }
-  &__contentImage {
+  &__containerPhoto {
     border: 0.25rem solid $primary;
     border-radius: 50%;
     box-shadow: 2px 4px 10px $shadowDark;
@@ -54,7 +54,7 @@ body.light {
     &__skills {
       color: $primaryDark;
     }
-    &__contentImage {
+    &__containerPhoto {
       border: 0.25rem solid $secondary;
       box-shadow: 2px 4px 10px $shadowLight;
     }

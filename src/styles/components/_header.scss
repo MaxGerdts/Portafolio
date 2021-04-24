@@ -3,11 +3,11 @@ Header
 **********/
 .header {
   background-color: #262626;
-  position: sticky;
+  box-shadow: 2px 4px 10px $shadowDark;
   height: 4rem;
+  position: sticky;
   top: 0;
   z-index: 1030;
-  box-shadow: 2px 4px 10px $shadowDark;
   &__content {
     @include flexBox($align-items: center, $justify-content: space-between);
     height: 4rem;

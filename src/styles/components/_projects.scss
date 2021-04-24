@@ -8,11 +8,30 @@ Projects
     margin-bottom: 2rem;
   }
   &__contentRow {
-    @include row($flex-wrap: wrap, $margin-left: -2rem, $margin-right: -2rem);
+    @include row($flex-wrap: wrap, $margin-left: -1rem, $margin-right: -1rem);
   }
   &__contentCol {
-    @include col(50%, 50%, 2rem, 2rem);
-    margin-bottom: 4rem;
+    @include flexBox;
+    @include col(50%, 50%, 1rem, 1rem);
+    margin-bottom: 2rem;
+  }
+  &__content {
+    background-color: $secondaryDark;
+    border: 3px solid $primary;
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 10px $shadowDark;
+    color: $primaryLight;
+    padding: 1rem;
+  }
+  &__containerCompanyLogo {
+    @include flexBox($align-items: center, $justify-content: space-between);
+    margin-bottom: 0.5rem;
+  }
+  &__subTitle {
+    margin-bottom: 0.5rem;
+  }
+  &__description {
+    @include paragraph;
   }
 }
 
@@ -23,6 +42,12 @@ body.light {
   & .projects {
     &__title {
       color: $secondary;
+    }
+    &__content {
+      background-color: $secondaryLight;
+      border: 3px solid $secondary;
+      box-shadow: 2px 4px 10px $shadowLight;
+      color: $primaryDark;
     }
   }
 }

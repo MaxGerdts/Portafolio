@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import Typed from 'typed.js';
 
-import photoMax from '../../assets/foto.webp';
-//import gato from '../../assets/gato.jpeg';
+//import photoMax from '../../assets/foto.webp';
+import gato from '../../assets/gato.webp';
 
 export const Home = () => {
   useEffect(() => {
@@ -19,8 +19,8 @@ export const Home = () => {
     <section id='home' className='home'>
       <div className='container'>
         <div className='home__content'>
-          <div className='home__contentImage'>
-            <img src={photoMax} alt='Max photos' />
+          <div className='home__containerPhoto'>
+            <img src={gato} alt='Max photos' />
           </div>
           <h1 className='home__title'>Max Gerdts R.</h1>
           <div className='home__skills'>
