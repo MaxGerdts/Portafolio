@@ -43,14 +43,24 @@ Mixins
   -ms-flex-pack: $justify-content;
   justify-content: $justify-content;
 }
-@mixin button($color, $border) {
+@mixin button($color, $border, $color-hover) {
   border: 2px solid $border;
-  border-radius: 5px;
-  display: inline-block;
+  border-radius: 0.5rem;
+  display: block;
   color: $color;
-  font-size: 16px;
+  font-weight: 700;
+  max-width: 11rem;
+  padding: 0.625rem;
+  text-align: center;
   text-decoration: none;
-  padding: 10px 20px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  &:hover {
+    background: $border;
+    color: $color-hover;
+  }
 }
 
 @mixin paragraph {
