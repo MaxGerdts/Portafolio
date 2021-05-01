@@ -12,7 +12,7 @@ Skills
     margin-bottom: 1rem;
   }
   &__contentRow {
-    @include row($margin-left: -2rem, $margin-right: -2rem);
+    @include row($margin-left: -1rem, $margin-right: -1rem);
     &:last-child {
       & .skills__content:last-child {
         margin-bottom: 0;
@@ -20,7 +20,7 @@ Skills
     }
   }
   &__contentCol {
-    @include col(50%, 50%, 2rem, 2rem);
+    @include col(50%, 50%, 1rem, 1rem);
   }
   &__content {
     margin-bottom: 2rem;
@@ -46,6 +46,9 @@ Skills
     background-color: $primary;
     border-radius: 0.5rem;
     height: 100%;
+    &:hover {
+      background: darken($primary, 5%);
+    }
   }
 }
 
@@ -69,6 +72,9 @@ body.light {
     }
     &__skill {
       background-color: $secondary;
+      &:hover {
+        background: darken($secondary, 5%);
+      }
     }
   }
 }

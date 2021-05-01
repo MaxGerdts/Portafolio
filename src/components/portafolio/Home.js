@@ -14,7 +14,6 @@ export const Home = () => {
       loop: true,
     });
   });
-
   return (
     <section id='home' className='home'>
       <div className='container'>

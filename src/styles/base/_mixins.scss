@@ -43,7 +43,8 @@ Mixins
   -ms-flex-pack: $justify-content;
   justify-content: $justify-content;
 }
-@mixin button($color, $border, $color-hover) {
+@mixin button($background, $color, $border) {
+  background-color: $background;
   border: 2px solid $border;
   border-radius: 0.5rem;
   display: block;
@@ -53,18 +54,28 @@ Mixins
   padding: 0.625rem;
   text-align: center;
   text-decoration: none;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
   &:hover {
-    background: $border;
-    color: $color-hover;
+    background-color: $color;
+    color: $background;
   }
 }
-
 @mixin paragraph {
   letter-spacing: 1px;
   line-height: 1.8;
   text-align: justify;
+}
+@mixin mediaQuery($size, $breakpoint) {
+  @media ($size: $breakpoint) {
+    @content;
+  }
+}
+@mixin colResponsive($flex, $max-width) {
+  -webkit-box-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
+  max-width: $max-width;
 }

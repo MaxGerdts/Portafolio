@@ -11,6 +11,7 @@ Services
     @include row($margin-left: -1rem, $margin-right: -1rem);
   }
   &__contentCol {
+    @include flexBox;
     @include col(33.3%, 33.3%, 1rem, 1rem);
   }
   &__content {
