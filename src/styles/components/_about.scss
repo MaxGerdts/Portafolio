@@ -8,6 +8,9 @@ About
   &__contentPhoto {
     @include col(40%, 40%, 1rem, 1rem, max-width, 767px, 100%, 100%);
     text-align: center;
+    @include mediaQuery(max-width, 767px) {
+      margin-bottom: 2rem;
+    }
   }
   &__resume {
     @include col(60%, 60%, 1rem, 1rem, max-width, 767px, 100%, 100%);
@@ -44,6 +47,9 @@ About
     color: $primary;
     font-weight: 700;
     margin-right: 0.5rem;
+    @include mediaQuery(max-width, 450px) {
+      display: block;
+    }
   }
   &__button {
     @include button($primary, $primaryDark, $primary);

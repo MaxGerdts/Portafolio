@@ -28,7 +28,7 @@ Skills
     margin-bottom: 2rem;
   }
   &__labels {
-    @include flexBox($justify-content: space-between);
+    @include flexBox($justify-content: space-between, $breakpoint: 0);
     color: $primaryLight;
     margin-bottom: 1rem;
   }

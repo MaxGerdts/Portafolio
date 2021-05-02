@@ -24,11 +24,19 @@ Projects
     padding: 1rem;
   }
   &__containerCompanyLogo {
-    @include flexBox($align-items: center, $justify-content: space-between);
+    @include flexBox(
+      $align-items: center,
+      $justify-content: space-between,
+      $size: max-width,
+      $breakpoint: 450px,
+      $flex-direction-responsive: column-reverse
+    );
     margin-bottom: 0.5rem;
   }
-  &__subTitle {
-    margin-bottom: 0.5rem;
+  &__companyLogo {
+    @include mediaQuery(max-width, 450px) {
+      margin-bottom: 0.75rem;
+    }
   }
   &__description {
     @include paragraph;

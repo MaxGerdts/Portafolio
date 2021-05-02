@@ -19,19 +19,28 @@ Experience
       position: absolute;
       top: 0;
       width: 6px;
+      @include mediaQuery(max-width, 650px) {
+        content: none;
+      }
     }
   }
   &__leftContentRow {
     @include row($margin-left: -1rem, $margin-right: -1rem);
     .experience__contentCol {
-      @include col(50%, 50%, 1rem, 3rem, max-width, 767px, 100%, 100%);
+      @include col(50%, 50%, 1rem, 3rem, max-width, 650px, 100%, 100%);
+      @include mediaQuery(max-width, 650px) {
+        padding-right: 1rem;
+      }
     }
   }
   &__rightContentRow {
-    @include row($margin-left: -1rem, $margin-right: -1rem);
+    @include row($margin-left: -1rem, $margin-right: -1rem, $breakpoint: 650px);
     justify-content: flex-end;
     .experience__contentCol {
-      @include col(50%, 50%, 3rem, 1rem, max-width, 767px, 100%, 100%);
+      @include col(50%, 50%, 3rem, 1rem, max-width, 650px, 100%, 100%);
+      @include mediaQuery(max-width, 650px) {
+        padding-left: 1rem;
+      }
     }
   }
   &__contentCol {
@@ -63,6 +72,12 @@ Experience
       top: -8px;
       width: 40px;
       z-index: 1;
+    }
+    &::after,
+    &::before {
+      @include mediaQuery(max-width, 650px) {
+        content: none;
+      }
     }
   }
   &__leftContent {

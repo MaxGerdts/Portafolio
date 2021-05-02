@@ -9,7 +9,11 @@ Header
   top: 0;
   z-index: 1030;
   &__content {
-    @include flexBox($align-items: center, $justify-content: space-between);
+    @include flexBox(
+      $align-items: center,
+      $justify-content: space-between,
+      $breakpoint: 0
+    );
     height: 4rem;
   }
 }

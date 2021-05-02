@@ -53,8 +53,7 @@ Mixins
   $flex-direction: row,
   $size: max-width,
   $breakpoint: 767px,
-  $flex-responsive: 100%,
-  $max-width-responsive: 100%
+  $flex-direction-responsive: column
 ) {
   -webkit-box-align: $align-items;
   -ms-flex-align: $align-items;
@@ -68,10 +67,8 @@ Mixins
   -ms-flex-pack: $justify-content;
   justify-content: $justify-content;
   @include mediaQuery($size, $breakpoint) {
-    -webkit-box-flex: $flex-responsive;
-    -ms-flex: $flex-responsive;
-    flex: $flex-responsive;
-    max-width: $max-width-responsive;
+    -ms-flex-direction: $flex-direction-responsive;
+    flex-direction: $flex-direction-responsive;
   }
 }
 @mixin button($background, $color, $border) {
