@@ -5,7 +5,10 @@ Mixins
   $flex-direction: row,
   $flex-wrap: nowrap,
   $margin-left: 0,
-  $margin-right: 0
+  $margin-right: 0,
+  $size: max-width,
+  $breakpoint: 767px,
+  $flex-direction-responsive: column
 ) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,20 +19,42 @@ Mixins
   flex-wrap: $flex-wrap;
   margin-left: $margin-left;
   margin-right: $margin-right;
+  @include mediaQuery($size, $breakpoint) {
+    -ms-flex-direction: $flex-direction-responsive;
+    flex-direction: $flex-direction-responsive;
+  }
 }
-@mixin col($flex: 1, $max-width: 100%, $padding-left: 0, $padding-right: 0) {
+@mixin col(
+  $flex: 1,
+  $max-width: 100%,
+  $padding-left: 0,
+  $padding-right: 0,
+  $size: max-width,
+  $breakpoint: 767px,
+  $flex-responsive: 100%,
+  $max-width-responsive: 100%
+) {
   -webkit-box-flex: $flex;
   -ms-flex: $flex;
   flex: $flex;
   max-width: $max-width;
   padding-left: $padding-left;
   padding-right: $padding-right;
+  @include mediaQuery($size, $breakpoint) {
+    -webkit-box-flex: $flex-responsive;
+    -ms-flex: $flex-responsive;
+    flex: $flex-responsive;
+    max-width: $max-width-responsive;
+  }
 }
-
 @mixin flexBox(
   $align-items: stretch,
   $justify-content: flex-start,
-  $flex-direction: row
+  $flex-direction: row,
+  $size: max-width,
+  $breakpoint: 767px,
+  $flex-responsive: 100%,
+  $max-width-responsive: 100%
 ) {
   -webkit-box-align: $align-items;
   -ms-flex-align: $align-items;
@@ -42,6 +67,12 @@ Mixins
   -webkit-box-pack: $justify-content;
   -ms-flex-pack: $justify-content;
   justify-content: $justify-content;
+  @include mediaQuery($size, $breakpoint) {
+    -webkit-box-flex: $flex-responsive;
+    -ms-flex: $flex-responsive;
+    flex: $flex-responsive;
+    max-width: $max-width-responsive;
+  }
 }
 @mixin button($background, $color, $border) {
   background-color: $background;
@@ -72,10 +103,4 @@ Mixins
   @media ($size: $breakpoint) {
     @content;
   }
-}
-@mixin colResponsive($flex, $max-width) {
-  -webkit-box-flex: $flex;
-  -ms-flex: $flex;
-  flex: $flex;
-  max-width: $max-width;
 }

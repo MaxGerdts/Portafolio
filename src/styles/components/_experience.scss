@@ -24,14 +24,14 @@ Experience
   &__leftContentRow {
     @include row($margin-left: -1rem, $margin-right: -1rem);
     .experience__contentCol {
-      @include col(50%, 50%, 1rem, 3rem);
+      @include col(50%, 50%, 1rem, 3rem, max-width, 767px, 100%, 100%);
     }
   }
   &__rightContentRow {
     @include row($margin-left: -1rem, $margin-right: -1rem);
     justify-content: flex-end;
     .experience__contentCol {
-      @include col(50%, 50%, 3rem, 1rem);
+      @include col(50%, 50%, 3rem, 1rem, max-width, 767px, 100%, 100%);
     }
   }
   &__contentCol {

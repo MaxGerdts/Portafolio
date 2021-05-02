@@ -15,12 +15,14 @@ Skills
     @include row($margin-left: -1rem, $margin-right: -1rem);
     &:last-child {
       & .skills__content:last-child {
-        margin-bottom: 0;
+        @include mediaQuery(min-width, 768px) {
+          margin-bottom: 0;
+        }
       }
     }
   }
   &__contentCol {
-    @include col(50%, 50%, 1rem, 1rem);
+    @include col(50%, 50%, 1rem, 1rem, max-width, 767px, 100%, 100%);
   }
   &__content {
     margin-bottom: 2rem;
