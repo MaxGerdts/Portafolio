@@ -5,7 +5,10 @@ Mixins
   $flex-direction: row,
   $flex-wrap: nowrap,
   $margin-left: 0,
-  $margin-right: 0
+  $margin-right: 0,
+  $size: max-width,
+  $breakpoint: 767px,
+  $flex-direction-responsive: column
 ) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,20 +19,41 @@ Mixins
   flex-wrap: $flex-wrap;
   margin-left: $margin-left;
   margin-right: $margin-right;
+  @include mediaQuery($size, $breakpoint) {
+    -ms-flex-direction: $flex-direction-responsive;
+    flex-direction: $flex-direction-responsive;
+  }
 }
-@mixin col($flex: 1, $max-width: 100%, $padding-left: 0, $padding-right: 0) {
+@mixin col(
+  $flex: 1,
+  $max-width: 100%,
+  $padding-left: 0,
+  $padding-right: 0,
+  $size: max-width,
+  $breakpoint: 767px,
+  $flex-responsive: 100%,
+  $max-width-responsive: 100%
+) {
   -webkit-box-flex: $flex;
   -ms-flex: $flex;
   flex: $flex;
   max-width: $max-width;
   padding-left: $padding-left;
   padding-right: $padding-right;
+  @include mediaQuery($size, $breakpoint) {
+    -webkit-box-flex: $flex-responsive;
+    -ms-flex: $flex-responsive;
+    flex: $flex-responsive;
+    max-width: $max-width-responsive;
+  }
 }
-
 @mixin flexBox(
   $align-items: stretch,
   $justify-content: flex-start,
-  $flex-direction: row
+  $flex-direction: row,
+  $size: max-width,
+  $breakpoint: 767px,
+  $flex-direction-responsive: column
 ) {
   -webkit-box-align: $align-items;
   -ms-flex-align: $align-items;
@@ -42,19 +66,38 @@ Mixins
   -webkit-box-pack: $justify-content;
   -ms-flex-pack: $justify-content;
   justify-content: $justify-content;
+  @include mediaQuery($size, $breakpoint) {
+    -ms-flex-direction: $flex-direction-responsive;
+    flex-direction: $flex-direction-responsive;
+  }
 }
-@mixin button($color, $border) {
-  border: 1px solid $border;
-  border-radius: 5px;
-  display: inline-block;
+@mixin button($background, $color, $border) {
+  background-color: $background;
+  border: 2px solid $border;
+  border-radius: 0.5rem;
+  display: block;
   color: $color;
-  font-size: 16px;
+  font-weight: 700;
+  max-width: 11rem;
+  padding: 0.625rem;
+  text-align: center;
   text-decoration: none;
-  padding: 10px 20px;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  &:hover {
+    background-color: $color;
+    color: $background;
+  }
 }
-
 @mixin paragraph {
   letter-spacing: 1px;
   line-height: 1.8;
   text-align: justify;
+}
+@mixin mediaQuery($size, $breakpoint) {
+  @media ($size: $breakpoint) {
+    @content;
+  }
 }

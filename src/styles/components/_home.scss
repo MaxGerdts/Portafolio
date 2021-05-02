@@ -2,5 +2,65 @@
 Home
 **********/
 .home {
-  min-height: 100vh;
+  @include flexBox(center, center);
+  min-height: calc(100vh - 4rem);
+  padding: 0;
+  &__content {
+    text-align: center;
+    color: $primary;
+  }
+  &__containerPhoto {
+    border: 0.25rem solid $primary;
+    border-radius: 50%;
+    box-shadow: 2px 4px 10px $shadowDark;
+    display: inline-block;
+    height: 10rem;
+    overflow: hidden;
+    width: 10rem;
+  }
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+  &__skills {
+    color: $primaryLight;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  &__social {
+    @include flexBox($justify-content: center);
+    list-style: none;
+  }
+  &__socialItem {
+    margin: 0 0.5rem;
+  }
+  &__socialLink {
+    border: 1px solid $primary;
+    color: $primaryLight;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    width: 34px;
+  }
+}
+
+/**********
+Light theme home
+**********/
+body.light {
+  & .home {
+    &__content {
+      color: $secondary;
+    }
+    &__skills {
+      color: $primaryDark;
+    }
+    &__containerPhoto {
+      border: 0.25rem solid $secondary;
+      box-shadow: 2px 4px 10px $shadowLight;
+    }
+    &__socialLink {
+      border: 1px solid $secondary;
+      color: $primaryDark;
+    }
+  }
 }

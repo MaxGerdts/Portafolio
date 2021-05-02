@@ -9,33 +9,34 @@ Skills
   }
   &__subtitles {
     color: $primaryLight;
-    font-size: 20px;
     margin-bottom: 1rem;
   }
   &__contentRow {
-    @include row($margin-left: -2rem, $margin-right: -2rem);
+    @include row($margin-left: -1rem, $margin-right: -1rem);
     &:last-child {
       & .skills__content:last-child {
-        margin-bottom: 0;
+        @include mediaQuery(min-width, 768px) {
+          margin-bottom: 0;
+        }
       }
     }
   }
   &__contentCol {
-    @include col(50%, 50%, 2rem, 2rem);
+    @include col(50%, 50%, 1rem, 1rem, max-width, 767px, 100%, 100%);
   }
   &__content {
     margin-bottom: 2rem;
   }
   &__labels {
-    @include flexBox($justify-content: space-between);
+    @include flexBox($justify-content: space-between, $breakpoint: 0);
     color: $primaryLight;
     margin-bottom: 1rem;
   }
   &__key {
-    font-size: 15px;
+    font-size: 0.938rem;
   }
   &__value {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   &__skillBar {
     background-color: $primaryLight;
@@ -47,6 +48,9 @@ Skills
     background-color: $primary;
     border-radius: 0.5rem;
     height: 100%;
+    &:hover {
+      background: darken($primary, 5%);
+    }
   }
 }
 
@@ -70,6 +74,9 @@ body.light {
     }
     &__skill {
       background-color: $secondary;
+      &:hover {
+        background: darken($secondary, 5%);
+      }
     }
   }
 }

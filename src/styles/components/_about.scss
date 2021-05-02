@@ -3,21 +3,31 @@ About
 **********/
 .about {
   &__content {
-    @include row();
+    @include row($margin-left: -1rem, $margin-right: -1rem);
   }
-  &__photo {
-    @include col($flex: 40%, $max-width: 40%);
+  &__contentPhoto {
+    @include col(40%, 40%, 1rem, 1rem, max-width, 767px, 100%, 100%);
+    text-align: center;
+    @include mediaQuery(max-width, 767px) {
+      margin-bottom: 2rem;
+    }
   }
   &__resume {
-    @include col($flex: 60%, $max-width: 60%);
+    @include col(60%, 60%, 1rem, 1rem, max-width, 767px, 100%, 100%);
     color: $secondaryLight;
   }
   &__personalInformationRow {
-    @include row($margin-left: -1rem, $margin-right: -1rem);
+    @include row(
+      $margin-left: -1rem,
+      $margin-right: -1rem,
+      $size: max-width,
+      $breakpoint: 1100px,
+      $flex-direction-responsive: column
+    );
     margin-bottom: 1rem;
   }
   &__personalInformationCol {
-    @include col(none, 100%, 1rem, 1rem);
+    @include col(none, 100%, 1rem, 1rem, max-width, 767px, 100%, 100%);
   }
   &__title {
     color: $primary;
@@ -37,9 +47,12 @@ About
     color: $primary;
     font-weight: 700;
     margin-right: 0.5rem;
+    @include mediaQuery(max-width, 450px) {
+      display: block;
+    }
   }
   &__button {
-    @include button($primaryLight, $primary);
+    @include button($primary, $primaryDark, $primary);
   }
 }
 
@@ -58,7 +71,7 @@ body.light {
       color: $secondary;
     }
     &__button {
-      @include button($primaryDark, $secondary);
+      @include button($secondary, $primaryLight, $secondary);
     }
   }
 }

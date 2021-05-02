@@ -1,12 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+//import photoMax from '../../assets/foto.webp';
+import gato from '../../assets/gato.webp';
+
 export const About = () => {
   return (
     <section id='about' className='about'>
       <div className='container'>
         <div className='about__content'>
-          <div className='about__photo'>Photo</div>
+          <div className='about__contentPhoto'>
+            <img src={gato} alt='Max photos' />
+          </div>
           <div className='about__resume'>
             <h2 className='about__title'>Un poco sobre mi</h2>
             <p className='about__paragraph'>

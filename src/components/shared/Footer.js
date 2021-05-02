@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className='container'>
         <div className='footer__content'>
           <p className='footer__copyright'>
-            © All Right Reserved By
+            © Todos los derechos reservados por
             <span className='footer__brand'> Max Gerdts R.</span>
           </p>
         </div>

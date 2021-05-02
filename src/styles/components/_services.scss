@@ -11,7 +11,13 @@ Services
     @include row($margin-left: -1rem, $margin-right: -1rem);
   }
   &__contentCol {
-    @include col(33.3%, 33.3%, 1rem, 1rem);
+    @include col(33.3%, 33.3%, 1rem, 1rem, max-width, 767px, 100%, 100%);
+    display: flex;
+    &:not(:last-child) {
+      @include mediaQuery(max-width, 767px) {
+        margin-bottom: 2rem;
+      }
+    }
   }
   &__content {
     background-color: $secondaryDark;

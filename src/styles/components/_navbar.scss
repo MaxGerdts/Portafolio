@@ -3,7 +3,7 @@ Navbar
 **********/
 .navbar {
   &__list {
-    @include flexBox;
+    @include flexBox($breakpoint: 0);
     list-style: none;
   }
   &__link {
