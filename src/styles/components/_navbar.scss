@@ -5,6 +5,9 @@ Navbar
   &__list {
     @include flexBox($breakpoint: 0);
     list-style: none;
+    @include mediaQuery(max-width, 767px) {
+      display: none;
+    }
   }
   &__link {
     color: $primaryLight;
