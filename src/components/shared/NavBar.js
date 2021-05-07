@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 //import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import { ToggleTheme } from './ToggleTheme';
 
 export const NavBar = () => {
+  useEffect(() => {
+    const labelMobileMenu = document.querySelector('.navbar__labelMobileMenu');
+    labelMobileMenu.addEventListener('click', () => {
+      const inputMobileMenu = document.querySelector(
+        '.navbar__inputMobileMenu'
+      );
+      inputMobileMenu.checked
+        ? (document.getElementsByTagName('html')[0].style.overflow = 'auto')
+        : (document.getElementsByTagName('html')[0].style.overflow = 'hidden');
+    });
+  });
   return (
     <nav className='navbar'>
+      <label
+        htmlFor='navbar__inputMobileMenu'
+        className='navbar__labelMobileMenu'
+      >
+        <i className='fas fa-bars'></i>
+      </label>
+      <input
+        id='navbar__inputMobileMenu'
+        className='navbar__inputMobileMenu'
+        type='checkbox'
+      />
       <ul className='navbar__list'>
         <li className='navbar__listItem'>
           <NavHashLink
