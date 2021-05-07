@@ -9,7 +9,7 @@ Navbar
     }
   }
   &__labelMobileMenu {
-    color: $secondaryLight;
+    color: $primaryLight;
     cursor: pointer;
     font-size: 1.5rem;
     @include mediaQuery(min-width, 768px) {
@@ -58,7 +58,7 @@ Light theme navbar
 body.light {
   & .navbar {
     &__labelMobileMenu {
-      color: $secondaryDark;
+      color: $primaryDark;
     }
     &__list {
       @include mediaQuery(max-width, 767px) {

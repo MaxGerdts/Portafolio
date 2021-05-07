@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 //import photoMax from '../../assets/foto.webp';
 import gato from '../../assets/gato.webp';
@@ -62,14 +62,9 @@ export const About = () => {
                 </ul>
               </div>
             </div>
-            <NavLink
-              activeClassName='active'
-              className='about__button'
-              exact
-              to='#skills'
-            >
+            <NavHashLink smooth className='about__button' to='#skills'>
               Habilidades
-            </NavLink>
+            </NavHashLink>
           </div>
         </div>
       </div>
