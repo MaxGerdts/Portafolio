@@ -59,6 +59,10 @@ Services
         height: 100%;
       }
     }
+    @include mediaQuery(max-width, 767px) {
+      border: 3px solid $primary;
+      border-radius: 0.5rem;
+    }
   }
   &__icon {
     font-size: 2rem;
@@ -94,6 +98,9 @@ body.light {
         &::after {
           border-color: $secondary;
         }
+      }
+      @include mediaQuery(max-width, 767px) {
+        border: 3px solid $secondary;
       }
     }
   }
