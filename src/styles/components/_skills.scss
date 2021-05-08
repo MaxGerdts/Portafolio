@@ -27,16 +27,13 @@ Skills
   &__content {
     margin-bottom: 2rem;
   }
-  &__labels {
+  &__label {
     @include flexBox($justify-content: space-between, $breakpoint: 0);
     color: $primaryLight;
     margin-bottom: 1rem;
   }
   &__key {
     font-size: 0.938rem;
-  }
-  &__value {
-    font-size: 0.875rem;
   }
   &__skillBar {
     background-color: $primaryLight;
