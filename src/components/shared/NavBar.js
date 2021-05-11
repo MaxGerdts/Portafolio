@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavHashLink } from 'react-router-hash-link';
 import { ToggleTheme } from './ToggleTheme';
 
 export const NavBar = () => {
-  useEffect(() => {
+  const toggleScroll = () => {
     const inputMobileMenu = document.querySelector('.navbar__inputMobileMenu');
-    inputMobileMenu.addEventListener('change', () => {
-      inputMobileMenu.checked
-        ? (document.getElementsByTagName('html')[0].style.overflow = 'hidden')
-        : (document.getElementsByTagName('html')[0].style.overflow = 'auto');
-    });
-  });
+    inputMobileMenu.checked
+      ? (document.getElementsByTagName('html')[0].style.overflow = 'auto')
+      : (document.getElementsByTagName('html')[0].style.overflow = 'hidden');
+  };
   return (
     <nav className='navbar'>
       <label
         htmlFor='navbar__inputMobileMenu'
         className='navbar__labelMobileMenu'
+        onClick={toggleScroll}
       >
         <i className='fas fa-bars'></i>
       </label>
