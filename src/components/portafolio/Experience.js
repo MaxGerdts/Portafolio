@@ -13,7 +13,7 @@ export const Experience = () => {
                   Desarrollador Front End
                 </h3>
                 <h4 className='experience__company'>VTEX</h4>
-                <h5 className='experience__date'>Mayo 2020 - Actualidad</h5>
+                <h5 className='experience__date'>Mayo 2021 - Actualidad</h5>
                 <p className='experience__description'>
                   Desarrollador Front End con la plataforma VTEX
                 </p>

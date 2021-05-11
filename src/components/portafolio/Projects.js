@@ -15,7 +15,7 @@ export const Projects = () => {
           <div className='projects__contentCol'>
             <div className='projects__content'>
               <div className='projects__containerCompanyLogo'>
-                <h4 className='projects__subTitle'>ChileCompra CL</h4>
+                <h3 className='projects__subTitle'>ChileCompra CL</h3>
                 <img
                   src={ChileCompra}
                   className='projects__companyLogo'
@@ -31,7 +31,7 @@ export const Projects = () => {
           <div className='projects__contentCol'>
             <div className='projects__content'>
               <div className='projects__containerCompanyLogo'>
-                <h4 className='projects__subTitle'>WOM CL</h4>
+                <h3 className='projects__subTitle'>WOM CL</h3>
                 <img
                   src={WOM}
                   className='projects__companyLogo'
@@ -47,7 +47,7 @@ export const Projects = () => {
           <div className='projects__contentCol'>
             <div className='projects__content'>
               <div className='projects__containerCompanyLogo'>
-                <h4 className='projects__subTitle'>Coopeuch CL</h4>
+                <h3 className='projects__subTitle'>Coopeuch CL</h3>
                 <img
                   src={Coopeuch}
                   className='projects__companyLogo'
@@ -63,7 +63,7 @@ export const Projects = () => {
           <div className='projects__contentCol'>
             <div className='projects__content'>
               <div className='projects__containerCompanyLogo'>
-                <h4 className='projects__subTitle'>Easy CL</h4>
+                <h3 className='projects__subTitle'>Easy CL</h3>
                 <img
                   src={Easy}
                   className='projects__companyLogo'

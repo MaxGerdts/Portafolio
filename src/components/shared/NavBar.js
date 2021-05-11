@@ -4,14 +4,11 @@ import { ToggleTheme } from './ToggleTheme';
 
 export const NavBar = () => {
   useEffect(() => {
-    const labelMobileMenu = document.querySelector('.navbar__labelMobileMenu');
-    labelMobileMenu.addEventListener('click', () => {
-      const inputMobileMenu = document.querySelector(
-        '.navbar__inputMobileMenu'
-      );
+    const inputMobileMenu = document.querySelector('.navbar__inputMobileMenu');
+    inputMobileMenu.addEventListener('change', () => {
       inputMobileMenu.checked
-        ? (document.getElementsByTagName('html')[0].style.overflow = 'auto')
-        : (document.getElementsByTagName('html')[0].style.overflow = 'hidden');
+        ? (document.getElementsByTagName('html')[0].style.overflow = 'hidden')
+        : (document.getElementsByTagName('html')[0].style.overflow = 'auto');
     });
   });
   return (

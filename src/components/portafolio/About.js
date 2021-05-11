@@ -13,7 +13,7 @@ export const About = () => {
             <img src={gato} alt='Max photos' />
           </div>
           <div className='about__resume'>
-            <h2 className='about__title'>Un poco sobre mi</h2>
+            <h2 className='about__title'>Un poco sobre mí</h2>
             <p className='about__paragraph'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
               blanditiis perspiciatis ea natus, dolorem provident, eum doloribus
@@ -38,7 +38,7 @@ export const About = () => {
                     <span className='about__value'>25 años</span>
                   </li>
                   <li className='about__listItem'>
-                    <span className='about__key'>Correo electronico:</span>
+                    <span className='about__key'>Correo electrónico:</span>
                     <span className='about__value'>
                       max.gerdt95@hotmail.com
                     </span>
@@ -52,12 +52,12 @@ export const About = () => {
                     <span className='about__value'>+57 301 362 94 52</span>
                   </li>
                   <li className='about__listItem'>
-                    <span className='about__key'>Pais:</span>
+                    <span className='about__key'>País:</span>
                     <span className='about__value'>Colombia</span>
                   </li>
                   <li className='about__listItem'>
                     <span className='about__key'>Ciudad:</span>
-                    <span className='about__value'>Barranquilla/Atlantico</span>
+                    <span className='about__value'>Barranquilla/Atlántico</span>
                   </li>
                 </ul>
               </div>
