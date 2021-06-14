@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavHashLink } from 'react-router-hash-link';
 import { ToggleTheme } from './ToggleTheme';
 
 export const NavBar = () => {
+  useEffect(() => {
+    const body = document.body;
+    const scrollDown = 'scrollDown';
+    const scrollDownHeader = 'scrollDownHeader';
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (
+        currentScroll > lastScroll &&
+        !body.classList.contains(scrollDown) &&
+        document.documentElement.scrollTop > 150
+      ) {
+        // down
+        body.classList.add(scrollDown);
+      } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains(scrollDown)
+      ) {
+        // up
+        body.classList.remove(scrollDown);
+      }
+      lastScroll = currentScroll;
+    });
+  });
+
   const toggleScroll = () => {
     const inputMobileMenu = document.querySelector('.navbar__inputMobileMenu');
     inputMobileMenu.checked

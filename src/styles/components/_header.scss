@@ -1,6 +1,11 @@
 /**********
 Header
 **********/
+.scrollDown {
+  & .header {
+    transform: translate(0, -100%);
+  }
+}
 .header {
   background-color: #262626;
   box-shadow: 2px 4px 10px $shadowDark;
@@ -8,6 +13,7 @@ Header
   position: sticky;
   top: 0;
   z-index: 1030;
+  transition: transform 1s;
   &__content {
     @include flexBox(
       $align-items: center,
