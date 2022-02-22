@@ -6,7 +6,6 @@ export const NavBar = () => {
   useEffect(() => {
     const body = document.body;
     const scrollDown = 'scrollDown';
-    const scrollDownHeader = 'scrollDownHeader';
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {

@@ -12,7 +12,7 @@ Skills
     margin-bottom: 1rem;
   }
   &__contentRow {
-    @include row($margin-left: -1rem, $margin-right: -1rem);
+    @include grid;
     &:last-child {
       & .skills__content:last-child {
         @include mediaQuery(min-width, 768px) {
@@ -21,14 +21,11 @@ Skills
       }
     }
   }
-  &__contentCol {
-    @include col(50%, 50%, 1rem, 1rem, max-width, 767px, 100%, 100%);
-  }
   &__content {
     margin-bottom: 2rem;
   }
   &__label {
-    @include flexBox($justify-content: space-between, $breakpoint: 0);
+    @include flex($justify-content: space-between, $breakpoint: 0);
     color: $primaryLight;
     margin-bottom: 1rem;
   }

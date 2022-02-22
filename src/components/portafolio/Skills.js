@@ -36,7 +36,7 @@ export const Skills = () => {
                 <span className='skills__key'>React JS</span>
               </div>
               <div className='skills__skillBar'>
-                <div className='skills__skill' style={{ width: '80%' }}></div>
+                <div className='skills__skill' style={{ width: '90%' }}></div>
               </div>
             </div>
             <div className='skills__content'>
@@ -78,7 +78,7 @@ export const Skills = () => {
                 <span className='skills__key'>JQuery</span>
               </div>
               <div className='skills__skillBar'>
-                <div className='skills__skill' style={{ width: '85%' }}></div>
+                <div className='skills__skill' style={{ width: '90%' }}></div>
               </div>
             </div>
             <div className='skills__content'>

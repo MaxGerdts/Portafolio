@@ -35,7 +35,7 @@ export const About = () => {
                   </li>
                   <li className='about__listItem'>
                     <span className='about__key'>Edad:</span>
-                    <span className='about__value'>25 años</span>
+                    <span className='about__value'>26 años</span>
                   </li>
                   <li className='about__listItem'>
                     <span className='about__key'>Correo electrónico:</span>

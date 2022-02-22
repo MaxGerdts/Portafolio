@@ -2,7 +2,7 @@
 Home
 **********/
 .home {
-  @include flexBox(center, center);
+  @include flex(center, center);
   min-height: calc(100vh - 4rem);
   padding: 0;
   &__content {
@@ -27,7 +27,7 @@ Home
     margin-bottom: 1rem;
   }
   &__social {
-    @include flexBox($justify-content: center);
+    @include flex($justify-content: center);
     list-style: none;
   }
   &__socialItem {

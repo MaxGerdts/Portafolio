@@ -10,7 +10,7 @@ Experience
   &__timeline {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       background-color: $primary;
       border-radius: 0.5rem;
       bottom: 0;
@@ -25,27 +25,20 @@ Experience
     }
   }
   &__leftContentRow {
-    @include row($margin-left: -1rem, $margin-right: -1rem);
+    @include grid;
     .experience__contentCol {
-      @include col(50%, 50%, 1rem, 3rem, max-width, 650px, 100%, 100%);
       @include mediaQuery(max-width, 650px) {
         padding-right: 1rem;
       }
     }
   }
   &__rightContentRow {
-    @include row($margin-left: -1rem, $margin-right: -1rem, $breakpoint: 650px);
-    justify-content: flex-end;
+    @include grid;
     .experience__contentCol {
-      @include col(50%, 50%, 3rem, 1rem, max-width, 650px, 100%, 100%);
       @include mediaQuery(max-width, 650px) {
         padding-left: 1rem;
       }
     }
-  }
-  &__contentCol {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
   &__content {
     background-color: $secondaryDark;
@@ -58,12 +51,12 @@ Experience
     &::before {
       position: absolute;
       border: medium solid $primary;
-      content: '';
+      content: "";
       top: 6px;
     }
     &::after {
-      content: '';
-      background-image: url('./../../assets/experience.webp');
+      content: "";
+      background-image: url("./../../assets/experience.webp");
       background-size: cover;
       border: 4px solid $primaryLight;
       border-radius: 50%;
@@ -88,7 +81,7 @@ Experience
     }
     &::after {
       box-shadow: 2px 4px 10px $shadowDark;
-      right: -75px;
+      right: -35px;
     }
   }
   &__rightContent {

@@ -1,59 +1,44 @@
 /**********
 Mixins
 **********/
-@mixin row(
-  $flex-direction: row,
-  $flex-wrap: nowrap,
-  $margin-left: 0,
-  $margin-right: 0,
+@mixin grid(
+  $align-items: stretch,
+  $justify-content: flex-start,
   $size: max-width,
   $breakpoint: 767px,
-  $flex-direction-responsive: column
+  $column-gap: 1rem,
+  $row-gap: 1rem,
+  $grid-template-columns: 2
 ) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: $flex-direction;
-  flex-direction: $flex-direction;
-  -ms-flex-wrap: $flex-wrap;
-  flex-wrap: $flex-wrap;
-  margin-left: $margin-left;
-  margin-right: $margin-right;
+  -webkit-box-align: $align-items;
+  -ms-flex-align: $align-items;
+  align-items: $align-items;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: $justify-content;
+  -ms-flex-pack: $justify-content;
+  justify-content: $justify-content;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  grid-template-columns: repeat($grid-template-columns, 1fr);
   @include mediaQuery($size, $breakpoint) {
-    -ms-flex-direction: $flex-direction-responsive;
-    flex-direction: $flex-direction-responsive;
   }
 }
-@mixin col(
-  $flex: 1,
-  $max-width: 100%,
-  $padding-left: 0,
-  $padding-right: 0,
-  $size: max-width,
-  $breakpoint: 767px,
-  $flex-responsive: 100%,
-  $max-width-responsive: 100%
-) {
-  -webkit-box-flex: $flex;
-  -ms-flex: $flex;
-  flex: $flex;
-  max-width: $max-width;
-  padding-left: $padding-left;
-  padding-right: $padding-right;
+@mixin gridItem($grid-column){
+  grid-column: $grid-column;
   @include mediaQuery($size, $breakpoint) {
-    -webkit-box-flex: $flex-responsive;
-    -ms-flex: $flex-responsive;
-    flex: $flex-responsive;
-    max-width: $max-width-responsive;
   }
 }
-@mixin flexBox(
+
+@mixin flex(
   $align-items: stretch,
   $justify-content: flex-start,
   $flex-direction: row,
   $size: max-width,
   $breakpoint: 767px,
-  $flex-direction-responsive: column
+  $flex-direction-responsive: column,
+  $column-gap: 1rem,
+  $row-gap: 1rem
 ) {
   -webkit-box-align: $align-items;
   -ms-flex-align: $align-items;
@@ -66,6 +51,8 @@ Mixins
   -webkit-box-pack: $justify-content;
   -ms-flex-pack: $justify-content;
   justify-content: $justify-content;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
   @include mediaQuery($size, $breakpoint) {
     -ms-flex-direction: $flex-direction-responsive;
     flex-direction: $flex-direction-responsive;

@@ -8,12 +8,7 @@ Projects
     margin-bottom: 2rem;
   }
   &__contentRow {
-    @include row($flex-wrap: wrap, $margin-left: -1rem, $margin-right: -1rem);
-  }
-  &__contentCol {
-    @include flexBox;
-    @include col(50%, 50%, 1rem, 1rem, max-width, 767px, 100%, 100%);
-    margin-bottom: 2rem;
+    @include grid;
   }
   &__content {
     background-color: $secondaryDark;
@@ -24,7 +19,7 @@ Projects
     padding: 1rem;
   }
   &__containerCompanyLogo {
-    @include flexBox(
+    @include flex(
       $align-items: center,
       $justify-content: space-between,
       $size: max-width,

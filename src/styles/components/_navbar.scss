@@ -17,7 +17,7 @@ Navbar
     }
   }
   &__list {
-    @include flexBox($breakpoint: 0);
+    @include flex($breakpoint: 0);
     list-style: none;
     @include mediaQuery(max-width, 767px) {
       align-items: center;

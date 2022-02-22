@@ -15,7 +15,7 @@ Header
   z-index: 1030;
   transition: transform 1s;
   &__content {
-    @include flexBox(
+    @include flex(
       $align-items: center,
       $justify-content: space-between,
       $breakpoint: 0
