@@ -74,6 +74,7 @@ export const Projects = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
                 enim exercitationem consequatur
               </p>
+              <>Dartel => Morado => Gabrica => Yamamay</>    
             </div>
           </div>
         </div>
